@@ -14,7 +14,6 @@ public class Spectrum
      */
     public static void main()
     {
-        while (true){
         System.out.print("Please enter a wavelength: ");
         Scanner in = new Scanner(System.in);
         double wavelength = in.nextDouble();
@@ -35,12 +34,12 @@ public class Spectrum
         }
         
         //TODO
-        else if (wavelength <= 4 * 10e-7 && wavelength > 7 * 10e-7)
+        else if (wavelength <= 7 * 10e-7 && wavelength > 4 * 10e-7)
         {
             System.out.println("Visible Light\nWavelength: 7 * 10e-7 to 4 * 10e-7\nFrequency: < 4  x 10e14 to 7.5 x 10e14");
         }
         
-         else if (wavelength <= 4 * 10e-7 && wavelength > 10e-8)
+         else if (wavelength <= 10e-7 && wavelength > 10e-8)
         {
             System.out.println("Ultraviolet\nWavelength: 4 * 10e-7 to 10e-8\nFrequency: < 7.5 x 10e14 to 3 x 10e16");
         }
@@ -52,7 +51,6 @@ public class Spectrum
         else 
         {
             System.out.println("Gamma Rays\nWavelength: < 10e-11\nFrequency: < 3 x 10e16 to 3 x 10e19");
-        }
         }
     }
 }
