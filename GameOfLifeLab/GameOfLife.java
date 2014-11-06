@@ -17,14 +17,34 @@ public class GameOfLife
     // the world comprised of the grid that displays the graphics for the game
     private ActorWorld world;
     
-    // the game board will have 5 rows and 5 columns
-    private final int ROWS = 5;
-    private final int COLS = 5;
+    // the game board will have 15 rows and 15 columns
+    private final int ROWS = 15;
+    private final int COLS = 15;
     
-    // constants for the location of the three cells initially alive
+    // constants for the location of the twenty-three cells initially alive
     private final int X1 = 0, Y1 = 2;
-    private final int X2 = 2, Y2 = 0;
-    private final int X3 = 2, Y3 = 1;
+    private final int X2 = 0, Y2 = 6;
+    private final int X3 = 1, Y3 = 5;
+    private final int X5 = 1, Y4 = 8;//<-------
+    private final int X6 = 2, Y5 = 0;
+    private final int X7 = 2, Y6 = 1;
+    private final int X8 = 2, Y7 = 6;
+    private final int X9 = 3, Y8 = 3;
+    private final int X10 = 4, Y9 = 5;
+    private final int X11 = 4, Y10 = 6;
+    private final int X12 = 5, Y11 = 0;
+    private final int X13 = 5, Y12 = 1;
+    private final int X14 = 5, Y13 = 3;
+    private final int X15 = 5, Y14 = 6;
+    private final int X16 = 7, Y15 = 0;
+    private final int X17 = 7, Y16 = 1;
+    private final int X18 = 7, Y17 = 2;
+    private final int X19 = 7, Y18 = 3;
+    private final int X20 = 7, Y19 = 6;
+    private final int X21 = 7, Y20 = 8;
+    private final int X22 = 8, Y21 = 2;
+    private final int X23 = 8, Y22 = 4;
+    private final int X24 = 8, Y23 = 6;
 
     /**
      * Default constructor for objects of class GameOfLife
@@ -69,6 +89,94 @@ public class GameOfLife
         Rock rock2 = new Rock();
         Location loc2 = new Location(X2, Y2);
         grid.put(loc2, rock2);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock4 = new Rock();
+        Location loc4 = new Location(X4, Y4);
+        grid.put(loc4, rock4);
+        
+        Rock rock5 = new Rock();
+        Location loc5 = new Location(X5, Y5);
+        grid.put(loc5, rock5);
+        ////////////////////////
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
+        
+        Rock rock3 = new Rock();
+        Location loc3 = new Location(X3, Y3);
+        grid.put(loc3, rock3);
         
         Rock rock3 = new Rock();
         Location loc3 = new Location(X3, Y3);
