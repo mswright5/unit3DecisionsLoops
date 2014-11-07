@@ -73,7 +73,7 @@ public class GameOfLifeTest
                 if(     (row == 0 && col == 2) ||
                         (row == 0 && col == 6) ||
                         (row == 1 && col == 5) ||
-                        (row == 1 && col == 9) ||
+                        (row == 1 && col == 8) ||
                         (row == 2 && col == 0) ||
                         (row == 2 && col == 1) ||
                         (row == 2 && col == 6) ||
