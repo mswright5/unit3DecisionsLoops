@@ -4,6 +4,7 @@ import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
+import java.util.Scanner;
 
 /**
  * Game of Life starter code. Demonstrates how to create and populate the game using the GridWorld framework.
@@ -173,6 +174,15 @@ public class GameOfLife
         Rock rock23 = new Rock();
         Location loc23 = new Location(X23, Y23);
         grid.put(loc23, rock23);
+                
+        /*Scanner in = new Scanner(System.in);
+        String cont = "y";
+        while(cont.equals("y"))
+        {
+            createNextGeneration();
+            System.out.print("Would you like to continue? (y/n)");
+            cont = in.next().toLowerCase();
+        }*/
     }
 
     /**
@@ -193,8 +203,38 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
-        //World.setGrid(newGrid);
+        for(int row = 0; row<=ROWS; row++) //Iterate through all the grid rows
+        {
+            for(int col = 0; col <= COLS; col++) //Iterate through all the columns in one row (see above)
+            {
+                Actor actor = getActor(row,col);
+                Location loc = actor.getLocation();
+                if (actor != null) //if there is an actor here
+                {
+                    //checks the amount of alive adjacent cells and puts cell on new grid if 2 or 3
+                    //else it removes the actor
+                    if (grid.getOccupiedAdjacentLocations(loc).size() == 2 ||
+                        grid.getOccupiedAdjacentLocations(loc).size() == 3)
+                    {
+                        grid.put(loc, actor);
+                    }
+                    
+                    else { grid.remove(loc);}
+                }
+                
+                //If there was previously no actor, but the number of adjacent alive cells is 3, create
+                //new actor
+                else{
+                    if (grid.getOccupiedAdjacentLocations(loc).size() == 3)
+                    {
+                        Rock rock = new Rock();
+                        grid.put(loc, rock);
+                    }
+                }
+            }
+        }    
         
+        //World.setGrid(grid);
     }
     
     /**
