@@ -39,11 +39,11 @@ Nonfunctional Requirements:
 	generations. It will be easier to implement the unit test if you directly
 	produce and display subsequent generations.
 * MY REQUIREMENTS
-how large is the grid? is it boundless? 15x15
+how large is the grid? is it boundless? 25x25
 what do live cells look like? default
 what do dead cells look like? nothing
 what pattern is displayed? are multiple patterns available? are patterns chosen in code, chosen randomly, chosen by user
-how long does the game run? does it run forever? does it prompt the user to continue? NA
+how long does the game run? does it run forever? does it prompt the user to continue? Forever, no, 1 second wait
 what is the time interval between generations? 1 second
 what about edge cases? does it wrap around? I'll try
 

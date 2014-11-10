@@ -174,15 +174,6 @@ public class GameOfLife
         Rock rock23 = new Rock();
         Location loc23 = new Location(X23, Y23);
         grid.put(loc23, rock23);
-                
-        /*Scanner in = new Scanner(System.in);
-        String cont = "y";
-        while(cont.equals("y"))
-        {
-            createNextGeneration();
-            System.out.print("Would you like to continue? (y/n)");
-            cont = in.next().toLowerCase();
-        }*/
     }
 
     /**
@@ -203,15 +194,15 @@ public class GameOfLife
         Grid<Actor> grid = world.getGrid();
         
         // insert magic here...
-        for(int row = 0; row<=ROWS; row++) //Iterate through all the grid rows
+        for(int row = 0; row<ROWS; row++) //Iterate through all the grid rows
         {
-            for(int col = 0; col <= COLS; col++) //Iterate through all the columns in one row (see above)
+            for(int col = 0; col < COLS; col++) //Iterate through all the columns in one row (see above)
             {
                 Actor actor = getActor(row,col);
-                Location loc = actor.getLocation();
+                Location loc = new Location(row,col);
                 if (actor != null) //if there is an actor here
                 {
-                    //checks the amount of alive adjacent cells and puts cell on new grid if 2 or 3
+                    //checks the amount of alive adjacent cells and puts actor on new grid if 2 or 3
                     //else it removes the actor
                     if (grid.getOccupiedAdjacentLocations(loc).size() == 2 ||
                         grid.getOccupiedAdjacentLocations(loc).size() == 3)
@@ -219,7 +210,7 @@ public class GameOfLife
                         grid.put(loc, actor);
                     }
                     
-                    else { grid.remove(loc);}
+                    else {grid.remove(loc);}
                 }
                 
                 //If there was previously no actor, but the number of adjacent alive cells is 3, create
@@ -234,7 +225,7 @@ public class GameOfLife
             }
         }    
         
-        //World.setGrid(grid);
+        world.setGrid(grid);
     }
     
     /**
@@ -278,8 +269,18 @@ public class GameOfLife
      *
      */
     public static void main(String[] args)
+        throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
+        String answer = "y";
+        Scanner in = new Scanner(System.in);
+        while(answer.equals("y"))
+        {
+            Thread.sleep(1000);
+            game.createNextGeneration();
+            System.out.print("Would you like to continue? (y/n) ");
+            answer = in.next().toLowerCase();
+        }
+    
     }
-
 }
