@@ -192,7 +192,7 @@ public class GameOfLife
         
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
-        
+        BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
         // insert magic here...
         for(int row = 0; row<ROWS; row++) //Iterate through all the grid rows
         {
@@ -207,10 +207,8 @@ public class GameOfLife
                     if (grid.getOccupiedAdjacentLocations(loc).size() == 2 ||
                         grid.getOccupiedAdjacentLocations(loc).size() == 3)
                     {
-                        grid.put(loc, actor);
+                        newGrid.put(loc, actor);
                     }
-                    
-                    else {grid.remove(loc);}
                 }
                 
                 //If there was previously no actor, but the number of adjacent alive cells is 3, create
@@ -219,13 +217,13 @@ public class GameOfLife
                     if (grid.getOccupiedAdjacentLocations(loc).size() == 3)
                     {
                         Rock rock = new Rock();
-                        grid.put(loc, rock);
+                        newGrid.put(loc, rock);
                     }
                 }
             }
         }    
         
-        world.setGrid(grid);
+        world.setGrid(newGrid);
     }
     
     /**
@@ -272,8 +270,9 @@ public class GameOfLife
         throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
-        String answer = "y";
         Scanner in = new Scanner(System.in);
+        System.out.print("Would you like to continue? (y/n) ");
+        String answer = in.next().toLowerCase();
         while(answer.equals("y"))
         {
             Thread.sleep(1000);
