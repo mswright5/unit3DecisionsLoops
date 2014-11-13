@@ -43,8 +43,8 @@ how large is the grid? is it boundless? Bounds 25x25 starting at 1, 24x24 starti
 what do live cells look like? Live cells look like rocks
 what do dead cells look like? Dead cells look like nothing
 what pattern is displayed? are multiple patterns available? are patterns chosen in code, chosen randomly, chosen by user? Patterns chosen in code by default seed and game rules
-how long does the game run? does it run forever? does it prompt the user to continue? With my initial seed, it lasts about 11 generations, It does promp the user, 1 second wait
-what is the time interval between generations? 1 second
+how long does the game run? does it run forever? does it prompt the user to continue? With my initial seed, it lasts about 11 generations, It does promp the user
+what is the time interval between generations? User determined
 what about edge cases? does it wrap around? Open-ended edges
 
 

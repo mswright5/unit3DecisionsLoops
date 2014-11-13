@@ -1,0 +1,11 @@
+The hardest thing about this project was the lack of direction. You gave us an objective with the classes to use, but it was up to us about how to solve it. We even had to dive into the light use of Array Lists, which we were unfimiliar with, but I guess a major part of this was to compare to life when we would also have to go out and find solutions to problems given to us with no guidance. Overall a very challenging project, but a lot of it was time consuming to do because of repetitive code and test cases.
+
+What did you like or dislike and why? I disliked the lack of knowing what to do for about half the time, maybe more. I liked when I solved it.
+
+What was surprising or unexpected? I was surprised I could solve it. Unexpected it to look so cool.
+
+What did you learn? Documentation is a big help, if you sit back and sift through it, you'll find a method or two that will solve your issues (ArrayList.size())
+
+What questions do you still have? Do we have to do this again anytime soon?
+
+What advice would you offer next year's students? Pay attention to the Java documentation
